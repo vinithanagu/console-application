@@ -36,4 +36,12 @@ public class PersonEntity {
   @JoinColumn(name = "person_id")
   private final Set<AddressEntity> address = new HashSet<>();
 
+  public void addAddress(AddressEntity addressEntity){
+    address.add(addressEntity);
+  }
+
+  public void removeAddress(AddressEntity addressEntity){
+    address.remove(addressEntity);
+  }
+
 }
