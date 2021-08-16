@@ -8,10 +8,14 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
 
 @Data
 @Entity
+@Builder
+@ToString
 @Table(name = "address")
 public class AddressEntity {
 

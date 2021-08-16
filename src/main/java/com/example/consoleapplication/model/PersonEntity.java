@@ -1,6 +1,8 @@
 package com.example.consoleapplication.model;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -15,10 +17,12 @@ import javax.persistence.Table;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
 
 @Data
 @Entity
 @Builder
+@ToString
 @Table(name = "person")
 public class PersonEntity {
 
@@ -34,7 +38,7 @@ public class PersonEntity {
 
   @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
   @JoinColumn(name = "person_id")
-  private final Set<AddressEntity> address = new HashSet<>();
+  private final List<AddressEntity> address = new ArrayList<>();
 
   public void addAddress(AddressEntity addressEntity){
     address.add(addressEntity);
