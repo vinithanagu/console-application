@@ -1,9 +1,7 @@
 package com.example.consoleapplication.model;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -17,12 +15,12 @@ import javax.persistence.Table;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 @Data
 @Entity
 @Builder
-@ToString
 @Table(name = "person")
 public class PersonEntity {
 
@@ -38,6 +36,8 @@ public class PersonEntity {
 
   @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
   @JoinColumn(name = "person_id")
+  @ToString.Exclude
+  @EqualsAndHashCode.Exclude
   private final List<AddressEntity> address = new ArrayList<>();
 
   public void addAddress(AddressEntity addressEntity){
@@ -47,5 +47,4 @@ public class PersonEntity {
   public void removeAddress(AddressEntity addressEntity){
     address.remove(addressEntity);
   }
-
 }

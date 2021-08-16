@@ -7,7 +7,7 @@ import com.example.consoleapplication.model.PersonEntity;
 /**
  * The interface Personal service.
  */
-public interface PersonalService {
+public interface PersonService {
 
   /**
    * Add person person entity.
