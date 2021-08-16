@@ -3,6 +3,8 @@ package com.example.consoleapplication.service.impl;
 import java.util.List;
 import java.util.Objects;
 
+import lombok.AllArgsConstructor;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,16 +17,12 @@ import com.example.consoleapplication.service.AddressService;
 import com.example.consoleapplication.service.PersonService;
 
 @Service
+@AllArgsConstructor
 public class PersonServiceImpl implements PersonService {
 
   private final PersonRepository personRepository;
 
   private final AddressService addressServiceImpl;
-
-  public PersonServiceImpl(PersonRepository personRepository, AddressService addressService) {
-    this.personRepository = personRepository;
-    this.addressServiceImpl = addressService;
-  }
 
   @Override
   public PersonEntity addPerson(PersonEntity personEntity) {

@@ -57,7 +57,7 @@ public class ConsoleApplication implements CommandLineRunner {
 		System.out.println(personService.deletePerson(1L));
 
 		//delete a Address(should throw address not found exception since we are using cascade on join)
-		System.out.println(addressService.deleteAddress(1L));
+//		System.out.println(addressService.deleteAddress(1L));
 	}
 
 }

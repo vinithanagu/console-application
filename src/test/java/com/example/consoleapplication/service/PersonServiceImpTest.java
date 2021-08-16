@@ -173,7 +173,7 @@ public class PersonServiceImpTest {
     Mockito.when(addressService.getAddress(1L)).thenReturn(addressEntity);
 
     PersonEntity personEntity = personalService.addAddressToPerson(1L, 1L);
-    Assertions.assertEquals(personEntity.getAddress(), addressEntity);
+    Assertions.assertEquals(personEntity.getAddress().get(0), addressEntity);
   }
 
 }
