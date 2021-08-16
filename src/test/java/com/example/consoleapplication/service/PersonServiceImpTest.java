@@ -20,7 +20,7 @@ import com.example.consoleapplication.model.AddressEntity;
 import com.example.consoleapplication.model.PersonEntity;
 import com.example.consoleapplication.repository.PersonRepository;
 import com.example.consoleapplication.service.impl.AddressServiceImpl;
-import com.example.consoleapplication.service.impl.PersonalServiceImpl;
+import com.example.consoleapplication.service.impl.PersonServiceImpl;
 
 @DisplayName("PersonService Unit Tests")
 @ExtendWith(MockitoExtension.class)
@@ -33,7 +33,7 @@ public class PersonServiceImpTest {
   private AddressServiceImpl addressService;
 
   @InjectMocks
-  private PersonalServiceImpl personalService;
+  private PersonServiceImpl personalService;
 
 
   @Test

@@ -12,16 +12,16 @@ import com.example.consoleapplication.model.AddressEntity;
 import com.example.consoleapplication.model.PersonEntity;
 import com.example.consoleapplication.repository.PersonRepository;
 import com.example.consoleapplication.service.AddressService;
-import com.example.consoleapplication.service.PersonalService;
+import com.example.consoleapplication.service.PersonService;
 
 @Service
-public class PersonalServiceImpl implements PersonalService {
+public class PersonServiceImpl implements PersonService {
 
   private final PersonRepository personRepository;
 
   private final AddressService addressServiceImpl;
 
-  public PersonalServiceImpl(PersonRepository personRepository, AddressService addressService) {
+  public PersonServiceImpl(PersonRepository personRepository, AddressService addressService) {
     this.personRepository = personRepository;
     this.addressServiceImpl = addressService;
   }
