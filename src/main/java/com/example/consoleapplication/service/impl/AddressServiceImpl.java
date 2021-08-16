@@ -1,5 +1,7 @@
 package com.example.consoleapplication.service.impl;
 
+import lombok.AllArgsConstructor;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -9,13 +11,10 @@ import com.example.consoleapplication.repository.AddressRepository;
 import com.example.consoleapplication.service.AddressService;
 
 @Service
+@AllArgsConstructor
 public class AddressServiceImpl implements AddressService {
 
   private final AddressRepository addressRepository;
-
-  public AddressServiceImpl(AddressRepository addressRepository) {
-    this.addressRepository = addressRepository;
-  }
 
   @Override
   public AddressEntity addAddress(AddressEntity addressEntity) {
